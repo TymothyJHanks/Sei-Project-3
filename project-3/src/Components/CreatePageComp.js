@@ -16,16 +16,12 @@ class CreatePageComp extends Component {
     //Place Functions Here
     handleChange(event) {
         //setting the state of the key "this.state.userInput" and giving it the value of whatever the user inputs into the virtual dom
-        let stateDataPoint1 = event.target.dataPoint1
-        let stateDataPoint2 = event.target.dataPoint2
-        let stateDataPoint3 = event.target.dataPoint3
+        let stateName = event.target.name
         this.setState({
-            [stateDataPoint1]: event.target.value,
-            [stateDataPoint2]: event.target.value,
-            [stateDataPoint3]: event.target.value
+            [stateName]: event.target.value,
         });
     }
-
+    // Need to change this function so that when you submit something this function looks at the backend data
     handleSubmit(event){
         alert(`We are creating a rover based on this data ${this.state.dataPoint1} & ${this.state.dataPoint2} & ${this.state.dataPoint3} `);
         event.preventDefault( );
@@ -65,6 +61,7 @@ class CreatePageComp extends Component {
                     placeholder="DataPoint1"
                     value={this.state.dataPoint1}
                     onChange={this.handleChange}
+                    name="dataPoint1"
                     ></input>
                 </div>
 
@@ -75,6 +72,7 @@ class CreatePageComp extends Component {
                     placeholder="DataPoint2"
                     value={this.state.dataPoint2}
                     onChange={this.handleChange}
+                    name="dataPoint2"
                     ></input>
                 </div>
 
@@ -85,6 +83,7 @@ class CreatePageComp extends Component {
                     placeholder="DataPoint3"
                     value={this.state.dataPoint3}
                     onChange={this.handleChange}
+                    name="dataPoint3"
                     ></input>
                 </div>
                 {/* This submits the form */}

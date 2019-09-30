@@ -20,8 +20,9 @@ class Search extends Component {
     //handleChange Funtion that changes the empty string into the value that the user types into the input field from the virtual dom below
     handleChange(event) {
         //setting the state of the key "this.state.userInput" and giving it the value of whatever the user inputs into the virtual dom
+        let stateUserImput = event.target.searchValue
         this.setState({
-            userInput: event.target.value
+            [stateUserImput]: event.target.value
         });
     }
 
@@ -42,7 +43,8 @@ class Search extends Component {
                 placeholder="Search Here" 
                 type="text" 
                 value={this.state.userInput}
-                onChange={this.handleChange}></input>  
+                onChange={this.handleChange}
+                searchValue="userInput"></input>  
 
             <input type="Submit" value="Submit"></input>
           </form>
