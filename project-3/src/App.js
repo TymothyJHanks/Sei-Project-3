@@ -10,7 +10,7 @@ class App extends Component {
   render(){
     return (
       <div className="AppWrapper">
-        <NavComp></NavComp>
+        {/* <NavComp></NavComp> */}
         {/* <SearchComp></SearchComp> */}
         <CreatePageComp></CreatePageComp>
         

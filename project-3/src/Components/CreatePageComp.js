@@ -16,10 +16,13 @@ class CreatePageComp extends Component {
     //Place Functions Here
     handleChange(event) {
         //setting the state of the key "this.state.userInput" and giving it the value of whatever the user inputs into the virtual dom
+        let stateDataPoint1 = event.target.dataPoint1
+        let stateDataPoint2 = event.target.dataPoint2
+        let stateDataPoint3 = event.target.dataPoint3
         this.setState({
-            dataPoint1: event.target.value,
-            dataPoint2: event.target.value,
-            dataPoint3: event.target.value
+            [stateDataPoint1]: event.target.value,
+            [stateDataPoint2]: event.target.value,
+            [stateDataPoint3]: event.target.value
         });
     }
 
@@ -27,6 +30,26 @@ class CreatePageComp extends Component {
         alert(`We are creating a rover based on this data ${this.state.dataPoint1} & ${this.state.dataPoint2} & ${this.state.dataPoint3} `);
         event.preventDefault( );
     }
+
+    submitNewData(event){
+        event.preventDefault();
+        //Need to change fetch url when fully deployed backend is complete
+        fetch("https://raw.githubusercontent.com/tiffdawn15/MrsRvr-Backend/master/rover.json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Connection": "keep-alive",
+                "Cache-Control": "no-cache",
+                "Accept": "*/*"
+            },
+            body: JSON.stringify(this.state)
+        })
+        .then(responce =>{
+            console.log(responce)
+        })
+        .catch(error => console.log(error));
+    }
+    
     //Place Rendering Virtual Dom Here
     render(){
         return(
@@ -72,3 +95,31 @@ class CreatePageComp extends Component {
     }
 }
 export default CreatePageComp
+
+// NOTES/HELP
+
+// inputChange(evt) {
+//     let stateName = evt.target.name;
+//     this.setState({
+//       [stateName]: evt.target.value
+//     });
+//   }
+//   submitNewChar(evt) {
+//     evt.preventDefault();
+//     fetch("https://safe-crag-03509.herokuapp.com/characters/", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//                 "Connection": "keep-alive",
+//                 "Cache-Control": "no-cache",
+//                 "Accept": "*/*"
+//       },
+//       body: JSON.stringify(this.state)
+//     })
+//       .then(res => {
+//         console.log(res)
+        
+//       })
+//       .catch(err => console.log(err));
+  
+//   }
