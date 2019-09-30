@@ -4,7 +4,7 @@ import './App.css';
 //Imported Components
 import NavComp from "./Components/NavComp"
 import SearchComp from "./Components/SearchComp"
-
+import CreatePageComp from "./Components/CreatePageComp"
 
 class App extends Component {
   render(){
@@ -12,6 +12,8 @@ class App extends Component {
       <div className="AppWrapper">
         <NavComp></NavComp>
         <SearchComp></SearchComp>
+        <CreatePageComp></CreatePageComp>
+        
 
       </div>
     );

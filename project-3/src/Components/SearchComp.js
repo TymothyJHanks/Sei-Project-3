@@ -56,4 +56,6 @@ export default Search;
 
 //NOTES
     //Need to figure out when I click search, I specifically search for something inside my json file
-    
+    //You need the GET functionallity of the back end and then put the name of what the user imputs on the back of the url
+    //for the Api GET call to scan for that specific data like this: `https://www.exmpale.com/api/Plug_In_User_Data_Here`
+    //to specifically search for for that data point then display it
