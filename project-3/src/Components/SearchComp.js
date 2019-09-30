@@ -54,7 +54,9 @@ class Search extends Component {
 //exporting this file so that it can be used globally
 export default Search;
 
-//NOTES
+
+
+//NOTES/What I Need To Figure Out
     //Need to figure out when I click search, I specifically search for something inside my json file
     //You need the GET functionallity of the back end and then put the name of what the user imputs on the back of the url
     //for the Api GET call to scan for that specific data like this: `https://www.exmpale.com/api/Plug_In_User_Data_Here`

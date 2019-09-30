@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="AppWrapper">
         <NavComp></NavComp>
-        <SearchComp></SearchComp>
+        {/* <SearchComp></SearchComp> */}
         <CreatePageComp></CreatePageComp>
         
 
