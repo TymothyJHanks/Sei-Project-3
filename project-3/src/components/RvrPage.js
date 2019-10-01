@@ -6,10 +6,14 @@ class RvrPage extends Component {
       <div>
         <img src={this.props["img_src"]} alt={this.props.name} />
         <div className="photoData">
-          <h3>{this.props.rover.name}</h3>
+          <h3>{this.props.rover.name} Rover</h3>
           <ul>
-            <li>{this.props.earth_date}</li>
-            <li>{this.props.camera.full_name}</li>
+            <li>Earth date: {this.props.earth_date}</li>
+            <li>Camera: {this.props.camera.full_name}</li>
+            <li>Launch Date: {this.props.rover["launch_date"]}</li>
+            <li>Landing Date: {this.props.rover["landing_date"]}</li>
+            <li>Status: {this.props.rover.status}</li>
+            <li>Max Sol: {this.props.rover["max_sol"]}</li>
           </ul>
           <div classname="heartButton"></div>
         </div>
@@ -18,4 +22,4 @@ class RvrPage extends Component {
   }
 }
 
-export default RvrPage
+export default RvrPage;

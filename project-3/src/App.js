@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import RvrImg from "./components/RvrImg";
-import RvrPage from "./components/RvrPage"
+import RvrPage from "./components/RvrPage";
 import "./App.css";
 import { Route, Link } from "react-router-dom";
 
@@ -29,11 +29,11 @@ class App extends Component {
     return (
       <div className="App">
         <main>
-         
           <Route
             path="/"
             exact
-            render={() => this.state.rovers.map((image, i) => {
+            render={() =>
+              this.state.rovers.map((image, i) => {
                 console.log(image);
                 return (
                   <Link to={"/" + image.id} key={i}>
@@ -44,7 +44,14 @@ class App extends Component {
             }
           />
           {this.state.rovers.map((image, i) => {
-            return <Route path={"/" + image.id} key={i} render={() => <RvrPage {...image} key={i} />} key={i} />
+            return (
+              <Route
+                path={"/" + image.id}
+                key={i}
+                render={() => <RvrPage {...image} key={i} />}
+                key={i}
+              />
+            );
           })}
         </main>
       </div>
