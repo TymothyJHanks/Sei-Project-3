@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../styles/RvrImg.css"
 class RvrImg extends Component {
   render() {
-    if(true){
+    if(this.props.render){
     return (
       <div className="RvrImg">
         <img className="insta" src={this.props["img_src"]} alt={this.props.name} />
@@ -10,11 +10,15 @@ class RvrImg extends Component {
           <h3>{this.props.roverName}</h3>
           <ul>
             <li>{this.props.earth_date}</li>
+            <li>Status: {this.props.roverStatus}</li>
+            <li>Total Photos: {this.props.roverTotal_photos}</li>
           </ul>
           <div className="heartButton"></div>
         </div>
       </div>
     );
+  } else {
+    return null
   }
   }
 }

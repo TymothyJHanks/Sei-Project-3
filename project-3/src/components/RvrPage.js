@@ -10,10 +10,10 @@ class RvrPage extends Component {
           <h3>{this.props.roverName} Rover</h3>
           <ul>
             <li>Earth date: {this.props.earth_date}</li>
-            {/* <li>Launch Date: {this.props.roverLaunch_date}</li> */}
-            {/* <li>Landing Date: {this.props.roverLanding_date}</li> */}
+            <li>Launch Date: {this.props.roverLaunch_date}</li>
+            <li>Landing Date: {this.props.roverLanding_date}</li>
             <li>Status: {this.props.roverStatus}</li>
-            {/* <li>Max Sol: {this.props.roverMax_sol}</li> */}
+            <li>Total Photos: {this.props.roverTotal_photos}</li>
           </ul>
           <div className="heartButton"></div>
         </div>
