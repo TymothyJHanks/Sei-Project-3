@@ -5,13 +5,14 @@ class CreatePageComp extends Component {
         super(props)
         //Houseing User Input Data
         this.state = {
-            dataPoint1: "",
-            dataPoint2: "",
-            dataPoint3: ""
+            img_src: "",
+            earth_date: "",
+            SOL: ""
         }
         //Place Binding Here
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.submitNewData = this.submitNewData.bind(this);
     }
     //Place Functions Here
     handleChange(event) {
@@ -21,14 +22,16 @@ class CreatePageComp extends Component {
             [stateName]: event.target.value,
         });
     }
-    // Need to change this function so that when you submit something this function looks at the backend data
-    handleSubmit(event){
-        alert(`We are creating a rover based on this data ${this.state.dataPoint1} & ${this.state.dataPoint2} & ${this.state.dataPoint3} `);
-        event.preventDefault( );
-    }
+
+    // // Need to change this function so that when you submit something this function looks at the backend data
+    // handleSubmit(event){
+    //     alert(`Creating a rover based on this data... Img Url: ${this.state.img_src}; Earth Date: ${this.state.earth_date}; Sol Number: ${this.state.SOL} `);
+    //     event.preventDefault( );
+    // }
 
     submitNewData(event){
         event.preventDefault();
+        alert(`Creating a rover based on this data... Img Url: ${this.state.img_src}; Earth Date: ${this.state.earth_date}; Sol Number: ${this.state.SOL} `);
         //Need to change fetch url when fully deployed backend is complete
         fetch("https://raw.githubusercontent.com/tiffdawn15/MrsRvr-Backend/master/rover.json", {
             method: "POST",
@@ -55,39 +58,39 @@ class CreatePageComp extends Component {
                 <h1>this is the create page</h1>
                 {/* Each Data Point Is based off of data/model/schema information that I need to create a new data peice in JSON */}
                 <div className="DataPointOne">
-                    <h2>Information for DataPoint 1 Here</h2>
+                    <h2>Paste Image Url Below</h2>
                 <input 
                     type="text" 
-                    placeholder="DataPoint1"
-                    value={this.state.dataPoint1}
+                    placeholder="Image Url"
+                    value={this.state.img_src}
                     onChange={this.handleChange}
-                    name="dataPoint1"
+                    name="img_src"
                     ></input>
                 </div>
 
                 <div className="DataPointTwo">
-                <h2>Information for DataPoint 2 Here</h2>
+                <h2>Input Earth Date Here</h2>
                 <input 
                     type="text" 
-                    placeholder="DataPoint2"
-                    value={this.state.dataPoint2}
+                    placeholder="YYYY-MM-DD"
+                    value={this.state.earth_date}
                     onChange={this.handleChange}
-                    name="dataPoint2"
+                    name="earth_date"
                     ></input>
                 </div>
 
                 <div className="DataPoiintThree">
-                <h2>Information for DataPoint 3 Here</h2>
+                <h2>Input SOL Number Here</h2>
                 <input 
                     type="text" 
-                    placeholder="DataPoint3"
-                    value={this.state.dataPoint3}
+                    placeholder="SOL Number"
+                    value={this.state.SOL}
                     onChange={this.handleChange}
-                    name="dataPoint3"
+                    name="SOL"
                     ></input>
                 </div>
                 {/* This submits the form */}
-                    <input type="submit" value="Submit"></input>
+                    <input onClick={this.submitNewData} type="submit" value="Submit"></input>
                 </form>
             </div>
         )
@@ -122,3 +125,8 @@ export default CreatePageComp
 //       .catch(err => console.log(err));
   
 //   }
+
+
+// img_src: String, = Image Url
+//    earth_date: Date, = Earth Date
+//    SOL: Number, = SOL Date

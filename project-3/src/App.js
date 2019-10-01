@@ -11,8 +11,8 @@ class App extends Component {
     return (
       <div className="AppWrapper">
         {/* <NavComp></NavComp> */}
-        {/* <SearchComp></SearchComp> */}
-        <CreatePageComp></CreatePageComp>
+        <SearchComp></SearchComp>
+        {/* <CreatePageComp></CreatePageComp> */}
         
 
       </div>
@@ -50,3 +50,4 @@ export default App;
 // }
 
 // export default App;
+

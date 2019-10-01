@@ -12,10 +12,10 @@ class Nav extends Component {
         <nav>
             {/* Links to Components */}
           <Link to="/">Home</Link>
-          <Link to="/SearchPageComp">Search Page</Link>
+          <Link to="/CreatePageComp">Create Page</Link>
         </nav>
         {/* Routes */}
-        <Route path="/SearchPageComp" exact component={CreatePageComp}></Route>
+        <Route path="/CreatePageComp" exact component={CreatePageComp}></Route>
       </div>
     );
   }
