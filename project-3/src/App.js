@@ -7,9 +7,8 @@ import { Route, Link } from "react-router-dom";
 
 
 //Tym's Component Imports
-import Search from "./components/SearchComp";
 import NavComp from "./components/NavComp";
-import CreatePageComp from "./components/CreatePageComp";
+
 
 class App extends Component {
   constructor(props) {
