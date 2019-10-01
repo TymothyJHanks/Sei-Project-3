@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
-
+import "../styles/NavComp.css"
 //Need to import Home Component to Link to
 import CreatePageComp from "./CreatePageComp";
-import App from "../App";
 
 class Nav extends Component {
   render() {

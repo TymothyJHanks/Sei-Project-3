@@ -5,9 +5,9 @@ import "./App.css";
 import { Route, Link } from "react-router-dom";
 
 //Tym's Component Imports
-import SearchComp from "./Components/SearchComp"
-import NavComp from "./Components/NavComp"
-import CreatePageComp from "./Components/CreatePageComp"
+import Search from "./components/SearchComp";
+import NavComp from "./components/NavComp";
+import CreatePageComp from "./components/CreatePageComp";
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class App extends Component {
   componentDidMount() {
     let roverData = [];
     fetch(
-      "https://raw.githubusercontent.com/tiffdawn15/MrsRvr-Backend/master/rover.json"
+      "https://mrsrvr.herokuapp.com/"
     )
       .then(res => res.json())
       .then(res => {
@@ -34,25 +34,25 @@ class App extends Component {
     return (
       <div className="App">
         <main>
-          <SearchComp></SearchComp>
+          <NavComp />
+          <Route path="/" exact render={() => <Search rovers={this.state.rovers}/>} />
           <Route
             path="/"
             exact
-            render={() =>
-              this.state.rovers.map((image, i) => {
-                console.log(image);
+            render={() => {
+              return this.state.rovers.map((image, i) => {
                 return (
-                  <Link to={"/" + image.id} key={i}>
+                  <Link to={"/" + image._id} key={i}>
                     <RvrImg {...image} key={i} />
                   </Link>
                 );
-              })
-            }
+              });
+            }}
           />
           {this.state.rovers.map((image, i) => {
             return (
               <Route
-                path={"/" + image.id}
+                path={"/" + image._id}
                 key={i}
                 render={() => <RvrPage {...image} key={i} />}
                 key={i}
@@ -66,4 +66,3 @@ class App extends Component {
 }
 
 export default App;
-

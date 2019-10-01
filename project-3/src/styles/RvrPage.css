@@ -1,0 +1,10 @@
+.RvrPage{
+    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.singlePhoto{
+    max-width: 90vw;
+}

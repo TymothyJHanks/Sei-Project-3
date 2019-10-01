@@ -1,0 +1,13 @@
+.RvrImg {
+    width: 50vw;
+    border: solid blue 3px;
+    margin: 10px;
+    opacity: .7;
+    border-radius: 10px;
+}
+.insta {
+    width: inherit;
+}
+.RvrImg:hover{
+    opacity: 1;
+}
