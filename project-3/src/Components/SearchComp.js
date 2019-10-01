@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 
 //This data should be changed with the actual json backend data to loop through it
 
