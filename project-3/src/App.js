@@ -4,6 +4,11 @@ import RvrPage from "./components/RvrPage";
 import "./App.css";
 import { Route, Link } from "react-router-dom";
 
+//Tym's Component Imports
+import SearchComp from "./Components/SearchComp"
+import NavComp from "./Components/NavComp"
+import CreatePageComp from "./Components/CreatePageComp"
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,6 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         <main>
+          <SearchComp></SearchComp>
           <Route
             path="/"
             exact
@@ -60,33 +66,4 @@ class App extends Component {
 }
 
 export default App;
-
-
-// Default 
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
 
