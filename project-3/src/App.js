@@ -11,6 +11,7 @@ import Search from "./components/SearchComp";
 import NavComp from "./components/NavComp";
 import CreatePageComp from "./components/CreatePageComp";
 import Weather from "./components/WeatherComp"
+import WeatherBack from "./components/WeatherCompBackUp"
 import * as V from 'victory'
 
 class App extends Component {
@@ -71,8 +72,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Weather></Weather>
-        {/* <main>
+        {/* <Weather></Weather> */}
+        {/* <WeatherBack></WeatherBack> */}
+        <main>
        <NavComp />
           <Route path="/" exact render={() => <div className="SearchWrapper">
         <input
@@ -89,6 +91,7 @@ class App extends Component {
                 return (
                   <Link to={"/" + image._id} key={i}>
                     <RvrImg {...image} key={i} />
+
                   </Link>
                 );
               });
@@ -104,7 +107,7 @@ class App extends Component {
               />
             );
           })}
-        </main> */}
+        </main>
       </div>
     );
   }
