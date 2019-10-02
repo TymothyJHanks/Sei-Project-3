@@ -61,7 +61,7 @@ class CreatePageComp extends Component {
                 <h1>this is the create page</h1>
                 {/* Each Data Point Is based off of data/model/schema information that I need to create a new data peice in JSON */}
                 <div className="DataPointOne">
-                    <h2>Paste Image Url Below</h2>
+                    <h2>Paste Image URL of Rover </h2>
                 <input 
                     type="text" 
                     placeholder="Image Url"
@@ -72,10 +72,10 @@ class CreatePageComp extends Component {
                 </div>
 
                 <div className="DataPointTwo">
-                <h2>Input Earth Date Here</h2>
+                <h2>Rover Name Here</h2>
                 <input 
                     type="text" 
-                    placeholder="YYYY-MM-DD"
+                    placeholder="Name"
                     value={this.state.roverName}
                     onChange={this.handleChange}
                     name="roverName"
@@ -83,10 +83,10 @@ class CreatePageComp extends Component {
                 </div>
 
                 <div className="DataPointThree">
-                <h2>Input roverStatus Number Here</h2>
+                <h2>Input Rover Status Here</h2>
                 <input 
                     type="text" 
-                    placeholder="roverStatus Number"
+                    placeholder="Rover Status"
                     value={this.state.roverStatus}
                     onChange={this.handleChange}
                     name="roverStatus"
