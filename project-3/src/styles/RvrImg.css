@@ -1,0 +1,21 @@
+.RvrImg {
+    width: 50vw;
+    border: solid white 3px;
+    margin: 12px;
+    opacity: .7;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.603)
+}
+.insta {
+    width: inherit;
+}
+.RvrImg:hover{
+    background-color: white;
+    opacity: 1;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
