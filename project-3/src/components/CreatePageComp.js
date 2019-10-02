@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Link } from 'react-router-dom';
 
 class CreatePageComp extends Component {
     constructor(props){
@@ -6,8 +7,9 @@ class CreatePageComp extends Component {
         //Houseing User Input Data
         this.state = {
             img_src: "",
-            earth_date: "",
-            SOL: ""
+            roverName: "",
+            roverStatus: "",
+            render: true
         }
         //Place Binding Here
         this.handleChange = this.handleChange.bind(this);
@@ -25,28 +27,29 @@ class CreatePageComp extends Component {
 
     // // Need to change this function so that when you submit something this function looks at the backend data
     // handleSubmit(event){
-    //     alert(`Creating a rover based on this data... Img Url: ${this.state.img_src}; Earth Date: ${this.state.earth_date}; Sol Number: ${this.state.SOL} `);
+    //     alert(`Creating a rover based on this data... Img Url: ${this.state.img_src}; Earth Date: ${this.state.roverName}; roverStatus Number: ${this.state.roverStatus} `);
     //     event.preventDefault( );
     // }
 
     submitNewData(event){
         event.preventDefault();
-        alert(`Creating a rover based on this data... Img Url: ${this.state.img_src}; Earth Date: ${this.state.earth_date}; Sol Number: ${this.state.SOL} `);
+        alert(`Creating a rover based on this data... Img Url: ${this.state.img_src}; Earth Date: ${this.state.roverName}; roverStatus Number: ${this.state.roverStatus} `);
         //Need to change fetch url when fully deployed backend is complete
-        fetch("https://raw.githubusercontent.com/tiffdawn15/MrsRvr-Backend/master/rover.json", {
+        fetch("https://mrsrvr.herokuapp.com/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Connection": "keep-alive",
                 "Cache-Control": "no-cache",
-                "Accept": "*/*"
+                "Accept": "*/*",
             },
             body: JSON.stringify(this.state)
-        })
+        }).then(res => res.json())
         .then(responce =>{
             console.log(responce)
         })
         .catch(error => console.log(error));
+        
     }
     
     //Place Rendering Virtual Dom Here
@@ -54,11 +57,11 @@ class CreatePageComp extends Component {
         return(
             <div className="CreateWrapper">
                 {/* Need to place onSubmit={} attribute to the Form Tag */}
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.submitNewData}>
                 <h1>this is the create page</h1>
                 {/* Each Data Point Is based off of data/model/schema information that I need to create a new data peice in JSON */}
                 <div className="DataPointOne">
-                    <h2>Paste Image Url Below</h2>
+                    <h2>Paste Image URL of Rover </h2>
                 <input 
                     type="text" 
                     placeholder="Image Url"
@@ -69,28 +72,28 @@ class CreatePageComp extends Component {
                 </div>
 
                 <div className="DataPointTwo">
-                <h2>Input Earth Date Here</h2>
+                <h2>Rover Name Here</h2>
                 <input 
                     type="text" 
-                    placeholder="YYYY-MM-DD"
-                    value={this.state.earth_date}
+                    placeholder="Name"
+                    value={this.state.roverName}
                     onChange={this.handleChange}
-                    name="earth_date"
+                    name="roverName"
                     ></input>
                 </div>
 
-                <div className="DataPoiintThree">
-                <h2>Input SOL Number Here</h2>
+                <div className="DataPointThree">
+                <h2>Input Rover Status Here</h2>
                 <input 
                     type="text" 
-                    placeholder="SOL Number"
-                    value={this.state.SOL}
+                    placeholder="Rover Status"
+                    value={this.state.roverStatus}
                     onChange={this.handleChange}
-                    name="SOL"
+                    name="roverStatus"
                     ></input>
                 </div>
                 {/* This submits the form */}
-                    <input onClick={this.submitNewData} type="submit" value="Submit"></input>
+                    <input type="submit" />
                 </form>
             </div>
         )
@@ -119,14 +122,14 @@ export default CreatePageComp
 //       body: JSON.stringify(this.state)
 //     })
 //       .then(res => {
-//         console.log(res)
+//         conroverStatuse.log(res)
         
 //       })
-//       .catch(err => console.log(err));
+//       .catch(err => conroverStatuse.log(err));
   
 //   }
 
 
 // img_src: String, = Image Url
-//    earth_date: Date, = Earth Date
-//    SOL: Number, = SOL Date
+//    roverName: Date, = Earth Date
+//    roverStatus: Number, = roverStatus Date
