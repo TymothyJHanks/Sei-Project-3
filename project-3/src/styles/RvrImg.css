@@ -1,10 +1,13 @@
 .RvrImg {
+    display: flex;
+    flex-direction: column;
     width: 50vw;
     border: solid white 3px;
     margin: 12px;
     opacity: .7;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.603)
+    background-color: rgba(255, 255, 255, 0.603);
+    cursor: default
 }
 .insta {
     width: inherit;
@@ -13,9 +16,35 @@
     background-color: white;
     opacity: 1;
 }
-
 ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+    padding: 0;
+    margin: 5px 0;
+}
+.photoData{
+    display: flex;
+    flex-direction: column;
+}
+.nameAndLike {
+    margin: 5px 10px;
+    display: grid;
+    grid-template-columns: 30px 30px auto 30px 30px;
+}
+.heartButton {
+    cursor: pointer;
+    align-self: center;
+    grid-column-start: 5;
+    width: 30px;
+    height: 30px;
+}
+.roverName{
+  grid-column-start: 3;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+}
+b {
+    padding: 2px;
 }
