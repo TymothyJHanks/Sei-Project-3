@@ -10,6 +10,8 @@ import { Route, Link } from "react-router-dom";
 import Search from "./components/SearchComp";
 import NavComp from "./components/NavComp";
 import CreatePageComp from "./components/CreatePageComp";
+import Weather from "./components/WeatherComp"
+import * as V from 'victory'
 
 class App extends Component {
   constructor(props) {
@@ -69,7 +71,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <main>
+        <Weather></Weather>
+        {/* <main>
        <NavComp />
           <Route path="/" exact render={() => <div className="SearchWrapper">
         <input
@@ -101,7 +104,7 @@ class App extends Component {
               />
             );
           })}
-        </main>
+        </main> */}
       </div>
     );
   }
