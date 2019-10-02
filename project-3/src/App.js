@@ -8,6 +8,10 @@ import Audio from "./components/Audio"
 
 //Tym's Component Imports
 import NavComp from "./components/NavComp";
+import CreatePageComp from "./components/CreatePageComp";
+import Weather from "./components/WeatherComp"
+import WeatherBack from "./components/WeatherCompBackUp"
+import * as V from 'victory'
 
 class App extends Component {
   constructor(props) {
@@ -86,6 +90,7 @@ class App extends Component {
                 return (
                   <Link to={"/" + image._id} key={i}>
                     <RvrImg {...image} key={i} />
+
                   </Link>
                 );
               });
