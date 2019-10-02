@@ -1,11 +1,15 @@
 nav{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin: 10px;
-    width: 90%;
     color: white;
+    justify-content: space-between;
 }
+
+h1{
+  font-size: 35px;
+}
+
 nav > a {
     border: solid white 1px;
     background-color: rgba(0, 0, 0, 0.753);
