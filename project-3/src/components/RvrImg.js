@@ -11,7 +11,6 @@ class RvrImg extends Component {
           <ul>
             <li>{this.props.earth_date}</li>
             <li>Status: {this.props.roverStatus}</li>
-            <li>Total Photos: {this.props.roverTotal_photos}</li>
           </ul>
           <div className="heartButton"></div>
         </div>

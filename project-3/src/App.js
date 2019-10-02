@@ -3,13 +3,11 @@ import RvrImg from "./components/RvrImg";
 import RvrPage from "./components/RvrPage";
 import "./App.css";
 import { Route, Link } from "react-router-dom";
-
-
+import VideoBackground from "./components/VideoBackground"
+import Audio from "./components/Audio"
 
 //Tym's Component Imports
-import Search from "./components/SearchComp";
 import NavComp from "./components/NavComp";
-import CreatePageComp from "./components/CreatePageComp";
 
 class App extends Component {
   constructor(props) {
@@ -69,6 +67,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Audio />
+        <VideoBackground />
         <main>
        <NavComp />
           <Route path="/" exact render={() => <div className="SearchWrapper">
@@ -97,7 +97,6 @@ class App extends Component {
                 path={"/" + image._id}
                 key={i}
                 render={() => <RvrPage {...image} key={i} />}
-                key={i}
               />
             );
           })}
