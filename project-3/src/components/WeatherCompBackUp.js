@@ -333,15 +333,15 @@ class Weather extends Component {
     return (
       <div className="WeatherWrapper">
         <h1>This is the weather component</h1>
-        <h3>X-Axis = SOL aka the Soloar Date and Y-Axis = Average Tempature in °F</h3>
+        <h3>X-Axis = Soloar Date / Y-Axis = Tempature in °F</h3>
 
         <div className="chartWrapper">
           <VictoryChart theme={VictoryTheme.material}>
             {/* This is the chart ledgend */}
             <VictoryLegend
-              x={125} //Moves the chart on the x-axis
+              x={75} //Moves the chart on the x-axis
               y={100} //Moves the chart on the y-axis
-              title="Legend" //This is where you put the legend title
+              title="Daily Tempature on Mars" //This is where you put the legend title
               centerTitle //This is how you center the legend title
               orientation="horizontal" //this makes the legend data points horizontal instead of vertical
               gutter={10} //This spreads apart the legend data points and the larger the number the larger the spread between them
@@ -350,10 +350,16 @@ class Weather extends Component {
                   border:{ //"border" adds a border box around the entire legend
                     stroke:"black"
                   },
-                  title:{fontSize: 20} //this only increases the sisze of the "title" font
+                  title:{fontSize: 14} //this only increases the sisze of the "title" font
                 }
+              }s
+              data={ //this this specifically adjusts the data points and interacts with them
+                [
+                  {name: "Max", symbol: { fill: "#fc0f03", type: "star"}}, //this interacts with the first data point
+                  {name: "Average", symbol: { fill: "#24fc03", type: "star"}}, //this interacts with the second data point
+                  {name: "Min", symbol: { fill: "#032cfc", type: "star"}}, //this interacts with the third data point
+                ]
               }
-              data={}
               />
               {/* This first axis is so that the x-axis displays */}
               <VictoryAxis></VictoryAxis> 
