@@ -71,7 +71,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Audio /> */}
+        <Audio />
         <VideoBackground />
         <main>
        <NavComp />
