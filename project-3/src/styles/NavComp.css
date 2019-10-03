@@ -11,9 +11,8 @@ nav{
 }
 
 h1{
-  grid-column-start: 3;
+  color: white;
   font-size: 35px;
-  justify-self: center;
 }
 .create{
   justify-self: end;

@@ -7,11 +7,11 @@ import CreatePageComp from "./CreatePageComp";
 class Nav extends Component {
   render() {
     return (
-      <div className="NavWrapper">
+      <div className="NavWrapper"> 
+      <h1>MrsRvr</h1>
         <nav>
             {/* Links to Components */}
           <Link to="/" className="home">Home</Link>
-          <h1>MrsRvr</h1>
           <Link to="/CreatePageComp" className="create">Create Page</Link>
         </nav>
         {/* Routes */}
