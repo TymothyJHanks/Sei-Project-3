@@ -1,0 +1,10 @@
+.yAxis{
+    position: relative;
+    right:185px;
+    top:220px;
+    transform: rotate(-90deg);
+}
+.xAxis{
+    position: relative;
+    top: 80px;
+}

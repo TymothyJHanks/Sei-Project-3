@@ -9,6 +9,8 @@ import {
   VictoryStack,
   VictoryLegend
 } from "victory";
+//Importing CSS
+import "../styles/WeatherBack.css"
 //Using this as a test to make sure this data works
 const GraphData = {
   photos: [
@@ -332,8 +334,8 @@ class Weather extends Component {
   render() {
     return (
       <div className="WeatherWrapper">
-        <h1>This is the weather component</h1>
-        <h3>X-Axis = Soloar Date / Y-Axis = Tempature in °F</h3>
+        <h3 className="xAxis">Soloar Date</h3> 
+        <h3 className="yAxis">Tempature</h3>
 
         <div className="chartWrapper">
           <VictoryChart domainPadding={3} theme={VictoryTheme.material}>

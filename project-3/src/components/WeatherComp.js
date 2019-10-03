@@ -75,7 +75,6 @@ class Weather extends Component {
   render() {
     return (
       <div className="WeatherWrapper">
-        <h1>This is the weather component</h1>
         <h3>X-Axis = Days on Mars and Y-Axis = Tempature on Mars</h3>
 
         <div className="chartWrapper">
