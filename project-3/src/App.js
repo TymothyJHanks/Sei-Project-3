@@ -4,7 +4,6 @@ import RvrPage from "./components/RvrPage";
 import "./App.css";
 import { Route, Link } from "react-router-dom";
 import VideoBackground from "./components/VideoBackground";
-import Audio from "./components/Audio";
 
 //Tym's Component Imports
 import NavComp from "./components/NavComp";
