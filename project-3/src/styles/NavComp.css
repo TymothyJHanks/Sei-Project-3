@@ -1,11 +1,26 @@
 nav{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     align-items: center;
     margin: 10px;
-    width: 90%;
     color: white;
+    grid-gap: 10px;
 }
+.home{
+  width: 10vw;
+  grid-column-start: 1;
+}
+
+h1{
+  grid-column-start: 3;
+  font-size: 35px;
+  justify-self: center;
+}
+.create{
+  justify-self: end;
+  width: 10vw;
+  grid-column-start: 5;
+}
+
 nav > a {
     border: solid white 1px;
     background-color: rgba(0, 0, 0, 0.753);
