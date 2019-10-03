@@ -9,6 +9,12 @@
 .App-logo {
   height: 40vmin;
 }
+main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; 
+}
 
 .App-header {
   background-color: #282c34;

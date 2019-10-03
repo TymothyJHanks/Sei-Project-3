@@ -16,7 +16,7 @@ class Nav extends Component {
           <Link to="/" className="home">Home</Link>
           <Link to="/CreatePageComp" className="create">Create Page</Link>
           <Link to="/Weather">Temperature on Mars</Link>
-          <Link to="/login">Login</Link>
+          <Link to="/login" className="login">Login</Link>
         </nav>
         {/* Routes */}
         <Route path="/Weather" component={WetherCompBackUp}/>

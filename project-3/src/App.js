@@ -94,7 +94,7 @@ class App extends Component {
               return this.state.rovers.map((image, i) => {
                 return (
                   <Link to={"/" + image._id} key={i}>
-                    <RvrImg {...image} key={i} />
+                    <RvrImg {...image} info={image} key={i} />
 
                   </Link>
                 );
@@ -106,7 +106,7 @@ class App extends Component {
               <Route
                 path={"/" + image._id}
                 key={i}
-                render={() => <RvrPage {...image} key={i} />}
+                render={() => <RvrPage {...image} info={image} key={i} />}
               />
             );
           })}

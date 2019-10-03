@@ -4,17 +4,19 @@ nav{
     margin: 10px;
     color: white;
     grid-gap: 10px;
+    justify-items: center;
 }
 .home{
   width: 10vw;
+  justify-self: start;
 }
 
 h1{
   color: white;
   font-size: 35px;
 }
-.create{
-  width: 10vw;
+.login {
+  justify-self: end;
 }
 
 nav > a {
