@@ -61,8 +61,7 @@ class App extends Component {
   componentDidMount() {
     let roverData = [];
     fetch(
-      "https://mrsrvr.herokuapp.com/"
-    )
+      "https://mrsrvr.herokuapp.com/")
       .then(res => res.json())
       .then(res => {
         roverData = res;

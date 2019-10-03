@@ -7,7 +7,6 @@ nav{
 }
 .home{
   width: 10vw;
-  grid-column-start: 1;
 }
 
 h1{
@@ -15,12 +14,11 @@ h1{
   font-size: 35px;
 }
 .create{
-  justify-self: end;
   width: 10vw;
-  grid-column-start: 5;
 }
 
 nav > a {
+  grid-row-start: 1;
     border: solid white 1px;
     background-color: rgba(0, 0, 0, 0.753);
     padding: 10px;
