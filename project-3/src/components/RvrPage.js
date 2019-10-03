@@ -26,12 +26,12 @@ class RvrPage extends Component {
     alert(`Deleting a Rover`);
     //Need to change fetch url when fully deployed backend is complete
     //Need to change rover.Name to Id when the backend is done
-    fetch(`https://mrsrvr.herokuapp.com/delete/${this.props.id}`, {
+    fetch(`https://mrsrvr.herokuapp.com/delete/${this.props._id}`, {
       //check delete path controllers - `https://mrsrvr.herokuapp.com/delete/${this.}`
       method: "DELETE"
     })
       .then(responce => {
-        console.log(responce + this.props.id);
+        console.log(responce);
       })
       .catch(error => console.log(error));
   }

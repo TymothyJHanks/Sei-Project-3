@@ -334,10 +334,10 @@ class Weather extends Component {
   render() {
     return (
       <div className="WeatherWrapper">
-        <h3 className="xAxis">Soloar Date</h3> 
-        <h3 className="yAxis">Tempature</h3>
 
         <div className="chartWrapper">
+        <h3 className="xAxis">Soloar Date</h3> 
+        <h3 className="yAxis">Tempature</h3>
           <VictoryChart domainPadding={3} theme={VictoryTheme.material}>
             {/* This is the chart ledgend */}
             <VictoryLegend

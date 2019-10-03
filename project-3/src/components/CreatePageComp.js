@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Link } from 'react-router-dom';
+import "../styles/CreatePage.css";
 
 class CreatePageComp extends Component {
     constructor(props){
@@ -7,7 +8,7 @@ class CreatePageComp extends Component {
         //Houseing User Input Data
         this.state = {
             img_src: "",
-            roverName: "steve & david bowie",
+            roverName: "",
             roverStatus: "",
             render: true
         }
@@ -64,7 +65,6 @@ class CreatePageComp extends Component {
             <div className="CreateWrapper">
                 {/* Need to place onSubmit={} attribute to the Form Tag */}
                 <form onSubmit={this.submitNewData}>
-                <h1>this is the create page</h1>
                 {/* Each Data Point Is based off of data/model/schema information that I need to create a new data peice in JSON */}
                 <div className="DataPointOne">
                     <h2>Paste Image URL of Rover </h2>
@@ -139,3 +139,5 @@ export default CreatePageComp
 // img_src: String, = Image Url
 //    roverName: Date, = Earth Date
 //    roverStatus: Number, = roverStatus Date
+
+//Create Page is weird and delete button doesnt work
