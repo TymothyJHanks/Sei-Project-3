@@ -2,16 +2,12 @@ import React, { Component } from "react";
 import RvrImg from "./components/RvrImg";
 import RvrPage from "./components/RvrPage";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import VideoBackground from "./components/VideoBackground"
 import Audio from "./components/Audio"
 
 //Tym's Component Imports
 import NavComp from "./components/NavComp";
-import CreatePageComp from "./components/CreatePageComp";
-import Weather from "./components/WeatherComp"
-import WeatherBack from "./components/WeatherCompBackUp"
-import * as V from 'victory'
 
 //Tiff's Component Improts 
 import Register from "./auth/Register"
@@ -77,7 +73,7 @@ class App extends Component {
         <Audio />
         <VideoBackground />
         <main>
-          //Tiff Trying to add Register and Login to the component 
+          {/* Tiff Trying to add Register and Login to the component  */}
         <Route exact path="/register" component={Register}>Register Account</Route> 
         <Route exact path="/login" component={Login}>Login</Route>
        <NavComp />
