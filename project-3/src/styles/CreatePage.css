@@ -1,0 +1,7 @@
+.CreateWrapper{
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: solid white 1px;
+    padding: 10px;
+    border-radius: 5px;
+}

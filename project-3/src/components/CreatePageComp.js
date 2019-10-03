@@ -19,9 +19,15 @@ class CreatePageComp extends Component {
     handleChange(event) {
         //setting the state of the key "this.state.userInput" and giving it the value of whatever the user inputs into the virtual dom
         let stateName = event.target.name
-        this.setState({
-            [stateName]: event.target.value,
-        });
+        if(event.target.name === "roverName" && event.target.value === ""){
+            this.setState({
+                roverName: "steve & david bowie"
+            })
+        } else {
+            this.setState({
+                [stateName]: event.target.value,
+            });
+        }
     }
 
     // // Need to change this function so that when you submit something this function looks at the backend data
@@ -57,7 +63,6 @@ class CreatePageComp extends Component {
             <div className="CreateWrapper">
                 {/* Need to place onSubmit={} attribute to the Form Tag */}
                 <form onSubmit={this.submitNewData}>
-                <h1>this is the create page</h1>
                 {/* Each Data Point Is based off of data/model/schema information that I need to create a new data peice in JSON */}
                 <div className="DataPointOne">
                     <h2>Paste Image URL of Rover </h2>
@@ -132,3 +137,5 @@ export default CreatePageComp
 // img_src: String, = Image Url
 //    roverName: Date, = Earth Date
 //    roverStatus: Number, = roverStatus Date
+
+//Create Page is weird and delete button doesnt work

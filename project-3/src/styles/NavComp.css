@@ -12,8 +12,11 @@ nav{
 }
 
 h1{
-  color: white;
+  position: relative;
+  top:30px;
   font-size: 35px;
+  justify-self: center;
+  z-index: 100;
 }
 .login {
   justify-self: end;
@@ -34,3 +37,12 @@ nav > a {
   nav > a:visited{
     color: white;
   }
+  .titleWrapper{
+  grid-column-start: 3;
+  font-size: 35px;
+  justify-self: center;
+}
+.circularbutton{
+  position: relative;
+  bottom: 100px;
+}

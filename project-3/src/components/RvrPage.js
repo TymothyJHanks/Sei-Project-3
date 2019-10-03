@@ -200,3 +200,17 @@ export default RvrPage;
 // }
 
 // export default RvrPage;
+
+
+//change ID's on the backend on deleting by ID
+
+//Delete a rover record referencing the title 
+
+
+
+// destroy: (req,res) => {
+//   Rover.findOneAndDelete({id: req.params.id})
+//   .then(rover => res.json(rover))
+// }
+
+// controllerRouter.delete("/delete/:", roverController.destroy)

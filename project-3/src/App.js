@@ -8,6 +8,7 @@ import Audio from "./components/Audio"
 
 //Tym's Component Imports
 import NavComp from "./components/NavComp";
+import WeatherComp from "./components/WeatherCompBackUp"
 
 //Tiff's Component Improts 
 import Register from "./auth/Register"
@@ -70,7 +71,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Audio />
+        <WeatherComp/>
+         <Audio />
         <VideoBackground />
         <main>
           {/* Tiff Trying to add Register and Login to the component  */}

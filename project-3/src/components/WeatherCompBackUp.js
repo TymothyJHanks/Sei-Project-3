@@ -9,6 +9,8 @@ import {
   VictoryStack,
   VictoryLegend
 } from "victory";
+//Importing CSS
+import "../styles/WeatherBack.css"
 //Using this as a test to make sure this data works
 const GraphData = {
   photos: [
@@ -332,11 +334,11 @@ class Weather extends Component {
   render() {
     return (
       <div className="WeatherWrapper">
-        <h1>This is the weather component</h1>
-        <h3>X-Axis = Soloar Date / Y-Axis = Tempature in °F</h3>
 
         <div className="chartWrapper">
-          <VictoryChart theme={VictoryTheme.material}>
+        <h3 className="xAxis">Soloar Date</h3> 
+        <h3 className="yAxis">Tempature</h3>
+          <VictoryChart domainPadding={3} theme={VictoryTheme.material}>
             {/* This is the chart ledgend */}
             <VictoryLegend
               x={75} //Moves the chart on the x-axis
@@ -369,6 +371,10 @@ class Weather extends Component {
               tickFormat={x => `${x/1}°F`}/>
               {/* Data point 1 - average tempature */}
             <VictoryLine
+            animate = {{ //this is how you animate 
+              duration: 2000,
+              onLoad: {duration: 8000}
+            }}
               style={{
                 data: { stroke: "#24fc03" },
                 parent: { border: "1px solid #ccc" }
@@ -379,16 +385,25 @@ class Weather extends Component {
             />
             {/* Data point 2 - max tempature */}
             <VictoryLine
+            animate = {{
+              duration: 2000,
+              onLoad: {duration: 8000}
+            }}
               style={{
                 data: { stroke: "#fc0f03" },
                 parent: { border: "1px solid #ccc" }
               }}
             data={weatherData}
             x={"Sol"}
+            // x={`Sol`}
             y={"mx"}
             />
             {/* Data point 3 - Min tempature */}
             <VictoryLine
+            animate = {{
+              duration: 2000,
+              onLoad: {duration: 8000}
+            }}
               style={{
                 data: { stroke: "#032cfc" },
                 parent: { border: "1px solid #ccc" }
