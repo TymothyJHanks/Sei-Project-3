@@ -12,7 +12,7 @@ class Nav extends Component {
             {/* Links to Components */}
           <Link to="/" className="home">Home</Link>
           <h1>MrsRvr</h1>
-          <Link to="/CreatePageComp" className="Create">Create Page</Link>
+          <Link to="/CreatePageComp" className="create">Create Page</Link>
         </nav>
         {/* Routes */}
         <Route path="/CreatePageComp" exact component={CreatePageComp}></Route>
