@@ -11,9 +11,11 @@ nav{
 }
 
 h1{
-  grid-column-start: 3;
+  position: relative;
+  top:30px;
   font-size: 35px;
   justify-self: center;
+  z-index: 100;
 }
 .create{
   justify-self: end;
@@ -35,3 +37,12 @@ nav > a {
   nav > a:visited{
     color: white;
   }
+  .titleWrapper{
+  grid-column-start: 3;
+  font-size: 35px;
+  justify-self: center;
+}
+.circularbutton{
+  position: relative;
+  bottom: 100px;
+}
