@@ -172,7 +172,7 @@ const weatherData = [
         "__v": 0
       }
 ];
-const weatherData2 = [
+const weatherData2 = [ //This is not being used and  an delete
     {
         "_id": "5d94b8efd07b4c00043dbae7",
         "Sol": 295,
@@ -416,5 +416,5 @@ export default Weather;
 
 
 //UPDATE NOTES
-//Need to add a chart that tells you the color
+//Need to add a chart that tells you the color - DONE
 //need to add animation when you hover over the chart or something else 
