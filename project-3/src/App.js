@@ -6,6 +6,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import VideoBackground from "./components/VideoBackground"
 import Audio from "./components/Audio"
 
+//Tiff adding Redux stuff
+import { Provider } from "react-redux";
+import store from "./store";
+
 //Tym's Component Imports
 import NavComp from "./components/NavComp";
 import CreatePageComp from "./components/CreatePageComp";
@@ -75,7 +79,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Audio />
+
+        <Provider store={store}>
+          <Login />
+          <Register />
+        </Provider>
+
+        {/* <Audio />
         <VideoBackground />
         <main>
           //Tiff Trying to add Register and Login to the component 
@@ -115,7 +125,7 @@ class App extends Component {
               />
             );
           })}
-        </main>
+        </main> */}
       </div>
     );
   }
