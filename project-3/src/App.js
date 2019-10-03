@@ -3,16 +3,16 @@ import RvrImg from "./components/RvrImg";
 import RvrPage from "./components/RvrPage";
 import "./App.css";
 import { Route, Link } from "react-router-dom";
-import VideoBackground from "./components/VideoBackground"
-import Audio from "./components/Audio"
+import VideoBackground from "./components/VideoBackground";
+import Audio from "./components/Audio";
 
 //Tym's Component Imports
 import NavComp from "./components/NavComp";
-import WeatherComp from "./components/WeatherCompBackUp"
+import WeatherComp from "./components/WeatherCompBackUp";
 
-//Tiff's Component Improts 
-import Register from "./auth/Register"
-import Login from "./auth/Login"
+//Tiff's Component Improts
+import Register from "./auth/Register";
+import Login from "./auth/Login";
 
 class App extends Component {
   constructor(props) {
@@ -57,8 +57,7 @@ class App extends Component {
   }
   componentDidMount() {
     let roverData = [];
-    fetch(
-      "https://mrsrvr.herokuapp.com/")
+    fetch("https://mrsrvr.herokuapp.com/")
       .then(res => res.json())
       .then(res => {
         roverData = res;
@@ -71,25 +70,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <WeatherComp/> */}
-         <Audio />
         <VideoBackground />
         <main>
           {/* Tiff Trying to add Register and Login to the component  */}
-         
-        <Route exact path="/register" component={Register}>Register Account</Route> 
-        <Route exact path="/login" component={Login}>Login</Route>
-       <NavComp />
-    
-       
-          <Route path="/" exact render={() => <div className="SearchWrapper">
-          
-        <input
-          placeholder="Search Name Here"
-          type="text"
-          onChange={this.nameFind}
-        ></input>
-      </div>} />
+          <Route exact path="/register" component={Register}>
+            Register Account
+          </Route>
+          <Route exact path="/login" component={Login}>
+            Login
+          </Route>
+          <NavComp />
+          <Route
+            path="/"
+            exact
+            render={() => (
+              <div className="SearchWrapper">
+                <input
+                  placeholder="Search Name Here"
+                  type="text"
+                  onChange={this.nameFind}
+                ></input>
+              </div>
+            )}
+          />
           <Route
             path="/"
             exact
@@ -98,7 +101,6 @@ class App extends Component {
                 return (
                   <Link to={"/" + image._id} key={i}>
                     <RvrImg {...image} info={image} key={i} />
-
                   </Link>
                 );
               });
