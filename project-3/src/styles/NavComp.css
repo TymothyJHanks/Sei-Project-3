@@ -17,11 +17,11 @@ h1{
   font-size: 35px;
   justify-self: center;
   z-index: 100;
+  color: white;
 }
 .login {
   justify-self: end;
 }
-
 nav > a {
   grid-row-start: 1;
     border: solid white 1px;
@@ -41,6 +41,7 @@ nav > a {
   grid-column-start: 3;
   font-size: 35px;
   justify-self: center;
+  margin-bottom: -120px;
 }
 .circularbutton{
   position: relative;

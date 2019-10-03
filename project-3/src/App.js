@@ -71,11 +71,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <WeatherComp/>
+        {/* <WeatherComp/> */}
          <Audio />
         <VideoBackground />
         <main>
           {/* Tiff Trying to add Register and Login to the component  */}
+         
         <Route exact path="/register" component={Register}>Register Account</Route> 
         <Route exact path="/login" component={Login}>Login</Route>
        <NavComp />
