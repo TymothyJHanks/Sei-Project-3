@@ -6,7 +6,8 @@ import {
   VictoryAxis,
   VictoryTheme,
   VictoryLine,
-  VictoryStack
+  VictoryStack,
+  VictoryLegend
 } from "victory";
 //Using this as a test to make sure this data works
 const GraphData = {
@@ -336,6 +337,24 @@ class Weather extends Component {
 
         <div className="chartWrapper">
           <VictoryChart theme={VictoryTheme.material}>
+            {/* This is the chart ledgend */}
+            <VictoryLegend
+              x={125} //Moves the chart on the x-axis
+              y={100} //Moves the chart on the y-axis
+              title="Legend" //This is where you put the legend title
+              centerTitle //This is how you center the legend title
+              orientation="horizontal" //this makes the legend data points horizontal instead of vertical
+              gutter={10} //This spreads apart the legend data points and the larger the number the larger the spread between them
+              style={ //this "styles" specifically works on the styling for the legend
+                  {
+                  border:{ //"border" adds a border box around the entire legend
+                    stroke:"black"
+                  },
+                  title:{fontSize: 20} //this only increases the sisze of the "title" font
+                }
+              }
+              data={}
+              />
               {/* This first axis is so that the x-axis displays */}
               <VictoryAxis></VictoryAxis> 
               {/* created another axis specifically for the y-axis and so that information is independent from the x. Both are needed */}
