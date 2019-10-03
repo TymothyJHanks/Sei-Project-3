@@ -7,7 +7,7 @@ class CreatePageComp extends Component {
         //Houseing User Input Data
         this.state = {
             img_src: "",
-            roverName: "",
+            roverName: "steve & david bowie",
             roverStatus: "",
             render: true
         }
@@ -20,9 +20,15 @@ class CreatePageComp extends Component {
     handleChange(event) {
         //setting the state of the key "this.state.userInput" and giving it the value of whatever the user inputs into the virtual dom
         let stateName = event.target.name
-        this.setState({
-            [stateName]: event.target.value,
-        });
+        if(event.target.name === "roverName" && event.target.value === ""){
+            this.setState({
+                roverName: "steve & david bowie"
+            })
+        } else {
+            this.setState({
+                [stateName]: event.target.value,
+            });
+        }
     }
 
     // // Need to change this function so that when you submit something this function looks at the backend data

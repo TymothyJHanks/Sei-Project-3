@@ -336,7 +336,7 @@ class Weather extends Component {
         <h3>X-Axis = Soloar Date / Y-Axis = Tempature in °F</h3>
 
         <div className="chartWrapper">
-          <VictoryChart theme={VictoryTheme.material}>
+          <VictoryChart domainPadding={3} theme={VictoryTheme.material}>
             {/* This is the chart ledgend */}
             <VictoryLegend
               x={75} //Moves the chart on the x-axis
@@ -369,6 +369,10 @@ class Weather extends Component {
               tickFormat={x => `${x/1}°F`}/>
               {/* Data point 1 - average tempature */}
             <VictoryLine
+            animate = {{ //this is how you animate 
+              duration: 2000,
+              onLoad: {duration: 8000}
+            }}
               style={{
                 data: { stroke: "#24fc03" },
                 parent: { border: "1px solid #ccc" }
@@ -379,16 +383,25 @@ class Weather extends Component {
             />
             {/* Data point 2 - max tempature */}
             <VictoryLine
+            animate = {{
+              duration: 2000,
+              onLoad: {duration: 8000}
+            }}
               style={{
                 data: { stroke: "#fc0f03" },
                 parent: { border: "1px solid #ccc" }
               }}
             data={weatherData}
             x={"Sol"}
+            // x={`Sol`}
             y={"mx"}
             />
             {/* Data point 3 - Min tempature */}
             <VictoryLine
+            animate = {{
+              duration: 2000,
+              onLoad: {duration: 8000}
+            }}
               style={{
                 data: { stroke: "#032cfc" },
                 parent: { border: "1px solid #ccc" }
