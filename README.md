@@ -11,8 +11,7 @@ The MrsRvr site solves the problem of citizens lacking the knowlege to know what
 
 Brief Example
 ------------
-This could be a code snippet showing how your project should be used (if it is meant to be integrated into another app)
-This could be a screenshot of your project running in the browser (if it is a stand-alone application)
+<img src="./" width="700">
 
 
 List of Features / User Stories
