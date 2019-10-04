@@ -46,11 +46,15 @@ The Technologies Used:
 Installation Instructions / Getting Started
 -------------------------------------------
 How to Install Step-by-Step:
-- 1 - Go to https://github.com/TymothyJHanks/Sei-Project-3
-- 2 - Clone down repo into your local machine
-- 3 - Navigate into folder and then navigate inside the "project-3" directory
-- 4 - In your terminal type the command "npm run start" to launch the web application (at this point the app should be running)
-- 5 - If you want to play around with the code open up your code editor in this directroy.
+1. - Go to https://github.com/TymothyJHanks/Sei-Project-3
+
+2. - Clone down repo into your local machine
+
+3. - Navigate into folder and then navigate inside the "project-3" directory
+
+4. - In your terminal type the command "npm run start" to launch the web application (at this point the app should be running)
+
+5. - If you want to play around with the code open up your code editor in this directroy.
   
 
 Contribution Guidelines
