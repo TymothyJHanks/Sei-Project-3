@@ -1,20 +1,27 @@
 .yAxis{
     position: relative;
-    right:295px;
-    top:290px;
     transform: rotate(-90deg);
     color: black;
 }
 .xAxis{
     position: relative;
-    top: 80px;
+   
     color: black
 }
 .WeatherWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: rgba(255, 255, 255, 0.75);
         color: white;
         border: solid white 1px;
-        padding: 10px;
         border-radius: 5px;
 
+}
+.temp {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

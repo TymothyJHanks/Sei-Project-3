@@ -12,7 +12,6 @@ import {
 //Importing CSS
 import "../styles/WeatherBack.css";
 
-
 //VERY IMPORTANT - the 'Sol' data point needs to be equal to the tempature on mars and the "Season" data point is equal to the season on Earth"
 //So find out in spring, whats the tempature on mars and plug that tempature into the 'Sol' data point
 const weatherData = [
@@ -154,9 +153,10 @@ class Weather extends Component {
   render() {
     return (
       <div className="WeatherWrapper">
+        <h3 className="xAxis">Solar Date</h3>
+        <div className="temp">
+        <h3 className="yAxis">Tempature</h3>
         <div className="chartWrapper">
-          <h3 className="xAxis">Solar Date</h3>
-          <h3 className="yAxis">Tempature</h3>
           <VictoryChart domainPadding={3} theme={VictoryTheme.material}>
             {/* This is the chart ledgend */}
             <VictoryLegend
@@ -238,6 +238,7 @@ class Weather extends Component {
               y={"mn"}
             />
           </VictoryChart>
+        </div>
         </div>
       </div>
     );
