@@ -40,13 +40,22 @@ This is particularly important when it comes to recruiters scanning your project
 
 
 Installation Instructions / Getting Started
+(How to Install Step-by-Step:
+  1 - Go to https://github.com/TymothyJHanks/Sei-Project-3
+  2 - Clone down repo into your local machine
+  3 - Navigate into folder and then navigate inside the "project-3" directory
+  4 - In your terminal type the command "npm run start" to launch the web application (at this point the app should be running)
+  5 - If you want to play around with the code open up your code editor in this directroy.
+  
 This section should walk a reader, step by step, through the process of setting up your project
 For a tool meant to be integrated into other projects, this would likely outline the process of installing and accessing this tool in your project
 For an application, this would likely outline the process of forking, cloning, and starting the app locally
 
 
 Contribution Guidelines
-This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements
+This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements (If users wish to contriube to our project feel free to edit this code then create a pull request which will be reviewed by the development team. Please leave your contact information in the comments section of your pull request because the Dev team will reach out before adding in changes.)
 Good links to include are:
 A link to the project's main repository
+(Front-End Repo: https://github.com/TymothyJHanks/Sei-Project-3)
+(Back-End Repo: https://github.com/tiffdawn15/MrsRvr-Backend)
 A link to the project's issue tracker
