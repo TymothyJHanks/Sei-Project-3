@@ -11,7 +11,7 @@ The MrsRvr site solves the problem of citizens lacking the knowlege to know what
 
 Brief Example
 ------------
-<img src="./" width="700">
+<img src="./Screen Shot 2019-10-04 at 12.15.35 PM.png" width="700">
 
 
 List of Features / User Stories
