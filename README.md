@@ -2,11 +2,11 @@
 
 Description
 ------------
-(The MrsRvs project is a space exploration inspired web app that implements data from NASA to give the user an out of this world expereince) 
+The MrsRvs project is a space exploration inspired web app that implements data from NASA to give the user an out of this world expereince
 
-(It should be used for people who want to dive deeper into exploring what the surface looks like on other planets. There is also a chart that outlines the weather patterns on mars.)
+It should be used for people who want to dive deeper into exploring what the surface looks like on other planets. There is also a chart that outlines the weather patterns on mars.
 
-(The MrsRvr site solves the problem of citizens lacking the knowlege to know whats going beyond earth and is giving them a user-friendly, bite-sized way to gain knowlege about space.)
+The MrsRvr site solves the problem of citizens lacking the knowlege to know whats going beyond earth and is giving them a user-friendly, bite-sized way to gain knowlege about space.
 
 
 Brief Example
@@ -19,7 +19,7 @@ List of Features / User Stories
 -------------------------------
 Our Features Include:
 
-  Home Page - This is the first page that opens up once you go to the site and it displays different pictures that was taken by NASA's land rovers and their satellites. It displays the surfaces of planets but also, images of star systems and galexies. We have a Navigation bar that directs you to our Create Page, Tempature Chart Page and a user Login Page. 
+   - Home Page - This is the first page that opens up once you go to the site and it displays different pictures that was taken by NASA's land rovers and their satellites. It displays the surfaces of planets but also, images of star systems and galexies. We have a Navigation bar that directs you to our Create Page, Tempature Chart Page and a user Login Page. 
   
   Create Page - The users can be directed to this page by clicking the "Create Page" button in the navigation bar. Once loaded, users can input a image url of their favorite land rover or star system they find interesting. Then users can input a name for their image, followed-by inputing weather that space rover is currently active or non-active. After clicking submit and going back to the home page, the user will see their newly created rover at the bottom of the page. They can click on it which will show more details.
   
