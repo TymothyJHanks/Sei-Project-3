@@ -7,7 +7,6 @@ import VideoBackground from "./components/VideoBackground";
 
 //Tym's Component Imports
 import NavComp from "./components/NavComp";
-import WeatherComp from "./components/WeatherCompBackUp";
 
 //Tiff's Component Improts
 import Register from "./auth/Register";
@@ -72,9 +71,7 @@ class App extends Component {
         <VideoBackground />
         <main>
           {/* Tiff Trying to add Register and Login to the component  */}
-          <Route exact path="/register" component={Register}>
-            Register Account
-          </Route>
+         
           <Route exact path="/login" component={Login}>
             Login
           </Route>
@@ -113,7 +110,8 @@ class App extends Component {
                 render={() => <RvrPage {...image} info={image} key={i} />}
               />
             );
-          })}
+          })} 
+          <Route exact path="/register" component={Register} />
         </main>
       </div>
     );

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
+import Register from "./Register";
+
 import "../styles/Login.css"
 class Login extends Component {
   constructor() {
@@ -32,7 +34,7 @@ return (
                 <b>Login</b> below
               </h4>
               <p className="grey-text text-darken-1">
-                Don't have an account? <Link to="/register">Register</Link>
+                Don't have an account? <Link to="/register" className="lnktxt">Register</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -73,6 +75,7 @@ return (
             </form>
           </div>
         </div>
+        <Route path="/register" component={Register} />
       </div>
     );
   }
