@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.747);
+    margin: 20px;
+    border: solid white 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.s12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.row{
+    margin: 20px;
+}

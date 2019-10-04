@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../styles/Login.css"
 class Login extends Component {
   constructor() {
     super();
@@ -24,13 +25,9 @@ render() {
     const { errors } = this.state;
 return (
       <div className="container">
-        <div style={{ marginTop: "4rem" }} className="row">
+        <div className="row">
           <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
-            </Link>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+            <div className="col s12" >
               <h4>
                 <b>Login</b> below
               </h4>
@@ -59,7 +56,7 @@ return (
                 />
                 <label htmlFor="password">Password</label>
               </div>
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+              <div className="col s12" >
                 <button
                   style={{
                     width: "150px",
