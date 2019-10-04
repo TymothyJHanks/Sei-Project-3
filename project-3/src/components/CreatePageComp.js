@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/CreatePageComp.css";
+import "../styles/CreatePage.css";
 class CreatePageComp extends Component {
   constructor(props) {
     super(props);
