@@ -62,6 +62,6 @@ Contribution Guidelines
 If users wish to contriube to our project feel free to edit this code then create a pull request which will be reviewed by the development team. Please leave your contact information in the comments section of your pull request because the Dev team will reach out before adding in changes.
 
 A link to the project's main repository
--  Front-End Repo: https://github.com/TymothyJHanks/Sei-Project-3)
--  Back-End Repo: https://github.com/tiffdawn15/MrsRvr-Backend)
+-  Front-End Repo: https://github.com/TymothyJHanks/Sei-Project-3
+-  Back-End Repo: https://github.com/tiffdawn15/MrsRvr-Backend
 
